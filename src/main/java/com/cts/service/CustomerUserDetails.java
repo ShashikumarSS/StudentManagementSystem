@@ -50,4 +50,6 @@ public class CustomerUserDetails implements UserDetails {
     public boolean isEnabled() {
         return true;
     }
+    
+    //aditya
 }
