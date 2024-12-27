@@ -9,7 +9,8 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 import com.cts.entity.User;
 
-public class CustomerUserDetails implements UserDetails {
+public class CustomerUserDetails implements UserDetails 
+{
 	private User user;
 	 
     public CustomerUserDetails(User user) {
@@ -50,6 +51,4 @@ public class CustomerUserDetails implements UserDetails {
     public boolean isEnabled() {
         return true;
     }
-    
-    //shashi
 }

@@ -18,7 +18,8 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
  
  
 @ControllerAdvice
-public class GlobalExceptionHandler {
+public class GlobalExceptionHandler
+{
 
 @ExceptionHandler(MethodArgumentNotValidException.class)
 public ResponseEntity<Map<String, List<String>>> handleValidationErrors(MethodArgumentNotValidException ex) {

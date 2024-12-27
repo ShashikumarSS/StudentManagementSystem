@@ -18,6 +18,7 @@ public class UserServiceImpl implements UserService {
 	
 	@Autowired
 	UserRepository userRepository;
+	
 	@Autowired
 	PasswordEncoder passwordEncoder;
 	
@@ -38,7 +39,6 @@ public class UserServiceImpl implements UserService {
 
 	@Override
 	public String verify(UserRequestDto userRequestDto) {
-		// TODO Auto-generated method s
 		Authentication authentication  = manager.authenticate(new UsernamePasswordAuthenticationToken(userRequestDto.getEmail(), userRequestDto.getPassword()));
 		
 		if(authentication.isAuthenticated()) {

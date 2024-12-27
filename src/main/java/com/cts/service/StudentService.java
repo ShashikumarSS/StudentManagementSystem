@@ -10,7 +10,7 @@ public interface StudentService
 	
 	void createStudent(StudentRequestDto student);
 	
-	Student updateStudent(long id);
+	Student updateStudent(long id, Student student);
 	
 	void deleteStudent(long id);
 

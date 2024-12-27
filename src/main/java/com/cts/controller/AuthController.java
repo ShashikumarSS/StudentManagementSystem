@@ -13,7 +13,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 @RestController
-public class AuthController {
+public class AuthController 
+{
 
     @Autowired
     private AuthenticationManager authenticationManager;
@@ -33,9 +34,6 @@ public class AuthController {
            Authentication authentication = authenticationManager.authenticate(
                     new UsernamePasswordAuthenticationToken(authRequest.getUsername(), authRequest.getPassword())
             );
-//           if(authentication.isAuthenticated()) {
-//        	   System.out.println("user is authenticated");
-//           }
         } catch (Exception e) {
             logger.error("Authentication failed for user: {}", authRequest.getUsername(), e);
             throw new Exception("Incorrect username or password", e);

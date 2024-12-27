@@ -20,7 +20,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 
 @Component
-public class JwtRequestFilter extends OncePerRequestFilter {
+public class JwtRequestFilter extends OncePerRequestFilter 
+{
 
     @Autowired
     private CustomUserDetailsService userDetailsService;

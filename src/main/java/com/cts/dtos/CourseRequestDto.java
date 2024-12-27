@@ -10,7 +10,8 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class CourseRequestDto {
+public class CourseRequestDto
+{
 
     @NotBlank(message = "Course name is mandatory")
     private String courseName;

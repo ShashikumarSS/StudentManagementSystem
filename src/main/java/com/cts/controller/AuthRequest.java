@@ -1,6 +1,7 @@
 package com.cts.controller;
 
-public class AuthRequest {
+public class AuthRequest 
+{
 	
     private String username;
     private String password;

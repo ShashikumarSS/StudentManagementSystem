@@ -3,7 +3,8 @@ package com.cts.service;
 import java.util.List;
 import com.cts.entity.Course;
 
-public interface CourseService {
+public interface CourseService 
+{
 	
     List<Course> getAllCourses();
     

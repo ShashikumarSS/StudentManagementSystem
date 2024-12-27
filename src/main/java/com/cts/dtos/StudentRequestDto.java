@@ -1,25 +1,16 @@
 package com.cts.dtos;
 
 import jakarta.persistence.Column;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
-import lombok.AllArgsConstructor;
+
 import lombok.Data;
-import lombok.NoArgsConstructor;
+
 
 @Data
-//@NoArgsConstructor
-//@AllArgsConstructor
 public class StudentRequestDto 
 {
-//	@Id 
-//	@GeneratedValue(strategy = GenerationType.IDENTITY)
-//	private int rollNo;
 	
 	@Column(name = "student_name")
 	@NotBlank(message = "Name is mandatory")

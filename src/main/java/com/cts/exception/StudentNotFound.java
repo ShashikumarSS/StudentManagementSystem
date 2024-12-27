@@ -1,6 +1,7 @@
 package com.cts.exception;
 
-public class StudentNotFound extends RuntimeException{
+public class StudentNotFound extends RuntimeException
+{
 	
 	private String message;
 

@@ -52,14 +52,6 @@ public class StudentServiceImpl implements StudentService
 	}
 
 	@Override
-	public Student updateStudent(long id) {
-		Optional<Student>optional=studentRepository.findById(id);
-		Student student = null;
-		student=optional.get();
-		return student;
-	}
-
-	@Override
 	public void deleteStudent(long id) {
 		this.studentRepository.deleteById(id);
 		
@@ -93,9 +85,21 @@ public class StudentServiceImpl implements StudentService
 		studentRepository.save(student);
 	}
 
-//	@Override
-//	public void saveStudent(Student student) {
-//		this.saveStudent(student);
-//		
-//	}
+	@Override
+	public Student updateStudent(long id, Student student) {
+	    Optional<Student> optionalStudent = studentRepository.findById(id);
+	    if (optionalStudent.isPresent()) {
+	        Student existingStudent = optionalStudent.get();
+	        existingStudent.setName(student.getName());
+	        existingStudent.setPercentage(student.getPercentage());
+	        existingStudent.setBranch(student.getBranch());
+	        existingStudent.setEmail(student.getEmail());
+	        existingStudent.setPassword(student.getPassword());
+	        existingStudent.setRole(student.getRole());
+	        return studentRepository.save(existingStudent);
+	    } else {
+	        throw new StudentNotFound("Student not found with id: " + id);
+	    }
+	}
+
 }
